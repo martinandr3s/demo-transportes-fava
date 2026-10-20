@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transporte de maquinaria pesada en Reynosa | Transportes FAVA (propuesta)</title>
+<meta name="description" content="Transporte nacional de carga y maquinaria pesada desde Reynosa, Tamaulipas. Transfer, puerta a puerta, almacenaje y maniobras. Cotiza tu viaje.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+/* Idea: las franjas rojas en diagonal de la V del logo se vuelven la señal de la marca */
+:root{
+  --graphite:#2B2C30;   /* gris del logo */
+  --graphite-2:#3A3B40;
+  --red:#8A1C24;        /* rojo de las franjas */
+  --red-dark:#6C141B;
+  --asphalt:#F1F1EF;
+  --white:#FFFFFF;
+  --text:#1F2024;
+  --muted:#565961;
+  --line:#DBDBD8;
+  --lane:#F2B635;       /* línea de carretera, solo foco y detalles */
+  --r:6px;
+  --display:"Saira Condensed","Arial Narrow",sans-serif;
+  --body:"Saira",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--white);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--lane);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);line-height:1;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:16px;padding-right:16px}
+
+/* Franjas del logo */
+.stripes{background:repeating-linear-gradient(-60deg,var(--red) 0 10px,transparent 10px 20px)}
+
+.proposal{background:#111214;color:#fff;font-size:14px}
+.proposal .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.proposal button{background:var(--lane);color:var(--text);border:0;border-radius:4px;padding:6px 12px;font:inherit;font-weight:600;cursor:pointer}
+
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:72px}
+.brand{flex:none;display:block}
+.brand img{height:44px;width:auto}
+nav.main{display:flex;gap:2px;margin-left:auto}
+nav.main a{text-decoration:none;color:var(--text);font-weight:500;padding:8px 10px;border-radius:4px}
+nav.main a:hover{background:var(--asphalt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:var(--r);font:inherit;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-light{border-color:#fff;color:#fff}
+.btn-light:hover{background:#fff;color:var(--text)}
+.btn-dark{border-color:var(--text);color:var(--text)}
+.btn-dark:hover{background:var(--text);color:#fff}
+.call-top{flex:none}
+
+/* Portada */
+.hero{position:relative;color:#fff;background:var(--graphite) url("https://transportesfava.com/wp-content/uploads/2025/10/fondo_topne3.jpg") center 65%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,23,26,.92) 0%,rgba(22,23,26,.78) 45%,rgba(22,23,26,.15) 100%)}
+.hero .wrap{position:relative;padding-top:80px;padding-bottom:72px;display:grid;gap:22px;max-width:1180px}
+.hero .tag{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:#E4E4E1}
+.hero .tag i{width:44px;height:14px}
+.hero h1{font-size:clamp(44px,7vw,88px);font-weight:800;max-width:12ch;letter-spacing:-.01em}
+.hero p.lead{font-size:19px;color:#DCDCD8;max-width:32em}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+.road{display:grid;grid-template-columns:repeat(4,1fr);background:var(--graphite);color:#fff}
+.road div{padding:18px 20px;border-right:2px dashed rgba(242,182,53,.55);display:grid;gap:2px}
+.road div:last-child{border-right:0}
+.road b{font-family:var(--display);font-size:24px;font-weight:700}
+.road span{font-size:14px;color:#C9C9C5}
+
+section.block{padding:72px 0}
+section.alt{background:var(--asphalt)}
+.sec-head{display:grid;gap:10px;margin-bottom:32px;max-width:700px}
+.sec-head h2{font-size:clamp(34px,4.6vw,54px);font-weight:800;color:var(--graphite)}
+.sec-head p{color:var(--muted);font-size:18px}
+
+/* Clientes */
+.clients{padding:40px 0;border-bottom:1px solid var(--line)}
+.clients .wrap{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
+.clients h2{font-size:28px;color:var(--graphite)}
+.clients p{color:var(--muted);font-size:15px;margin-top:6px}
+.clients img{width:100%;border-radius:var(--r);border:1px solid var(--line)}
+
+/* Servicios */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc{background:var(--white);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
+.svc img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.svc .in{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1;border-top:5px solid var(--red)}
+.svc h3{font-size:26px;font-weight:700;color:var(--graphite)}
+.svc p{color:var(--muted);font-size:16px}
+.svc button{margin-top:auto;align-self:flex-start;background:none;border:0;padding:6px 0;font:inherit;font-weight:600;color:var(--red);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* Nosotros */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{width:100%;max-width:400px;aspect-ratio:9/12;object-fit:cover;border-radius:var(--r)}
+.about .pic i{position:absolute;right:0;bottom:-14px;width:46%;height:28px}
+.about .text{display:grid;gap:18px}
+.about .text p{color:var(--muted)}
+.values{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.values li{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:var(--r);padding:10px 14px;font-size:15px;color:var(--muted)}
+.values b{display:block;color:var(--text);font-size:16px}
+
+/* Por qué */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why div{display:grid;gap:8px;align-content:start;padding-top:16px;border-top:3px solid var(--graphite)}
+.why h3{font-size:28px;color:var(--graphite)}
+.why p{color:var(--muted)}
+
+/* Cotizador */
+.quote{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.quote .side{display:grid;gap:18px}
+.quote .side ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.quote .side li b{display:block;font-size:14px;color:var(--muted);font-weight:500}
+.quote .side a{font-family:var(--display);font-weight:700;font-size:26px;text-decoration:none;color:var(--graphite);overflow-wrap:anywhere}
+form.qf{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qf .full{grid-column:1/-1}
+.qf label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.qf input,.qf select,.qf textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);color:var(--text)}
+.route{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+.route .arrow{padding-bottom:12px;color:var(--red);font-weight:700}
+.qf .note{font-size:14px;color:var(--muted);margin-top:8px}
+.qf .err{color:var(--red);font-size:14px;margin-top:6px}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact div{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:6px;align-content:start}
+.contact h3{font-size:22px;color:var(--graphite)}
+.contact address{font-style:normal;color:var(--muted)}
+.contact a{font-weight:600;overflow-wrap:anywhere}
+
+footer{background:var(--graphite);color:#C9C9C5;font-size:15px}
+footer .stripes{height:10px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;padding-top:36px;padding-bottom:36px}
+footer b{font-family:var(--display);color:#fff;font-size:24px;display:block;margin-bottom:6px}
+footer a{color:#fff}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+
+dialog{border:0;padding:0;border-radius:var(--r);width:min(580px,calc(100vw - 32px));max-height:calc(100vh - 32px);color:var(--text)}
+dialog::backdrop{background:rgba(22,23,26,.6)}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--white)}
+.dh h2{font-size:28px;color:var(--graphite)}
+.x{background:none;border:0;font-size:28px;line-height:1;cursor:pointer;width:44px;height:44px;color:var(--text)}
+.db{padding:16px 20px 22px}
+.db ol{margin:0;padding-left:20px;display:grid;gap:12px}
+.db b{display:block}
+.db span{color:var(--muted);font-size:15px}
+
+@media (max-width:1000px){
+  nav.main{display:none}
+  .call-top{margin-left:auto}
+  .services{grid-template-columns:1fr 1fr}
+  .road{grid-template-columns:1fr 1fr}
+  .road div:nth-child(2){border-right:0}
+  .road div:nth-child(-n+2){border-bottom:2px dashed rgba(242,182,53,.55)}
+}
+@media (max-width:760px){
+  .hero .wrap{padding-top:52px;padding-bottom:52px}
+  .hero::before{background:linear-gradient(180deg,rgba(22,23,26,.9) 0%,rgba(22,23,26,.8) 100%)}
+  .about,.quote,.clients .wrap{grid-template-columns:1fr}
+  .about{gap:36px}
+  .why,.contact{grid-template-columns:1fr}
+  section.block{padding:52px 0}
+  form.qf{grid-template-columns:1fr;padding:18px}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .services{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr}
+  .brand img{height:36px}
+  .call-top span{display:none}
+  .call-top{padding:10px 12px}
+  .route{grid-template-columns:1fr}
+  .route .arrow{display:none}
+}
+</style>
+<style id="refero-theme">
+/* fonts: family=Inter:wght@400 */
+/* Estilo Refero: Freitag, "Swiss industrial catalog". UI en blanco, negro y gris concreto; el color solo vive en las fotos y en el logo. Todo en peso 400, mayúsculas compactas, botones píldora y retícula de 1px. */
+:root{
+  --graphite:#000000; --graphite-2:#404040; --red:#000000; --red-dark:#404040;
+  --asphalt:#F1F1F1; --text:#000000; --muted:#404040; --line:#CACACA; --r:12px;
+  --display:"Inter",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+}
+body{font-weight:400}
+h1,h2,h3{font-weight:400!important;text-transform:uppercase;letter-spacing:-.01em;line-height:.97}
+.btn{border-radius:9999px;font-weight:400;text-transform:uppercase;font-size:14px;letter-spacing:.04em}
+.btn-red{background:#000;color:#fff;box-shadow:2px 2px 10px rgba(0,0,0,.12)}
+.btn-red:hover{background:#404040}
+.btn-light{border-color:#fff}
+.btn-dark{border-color:#000}
+.hero h1{font-size:clamp(40px,6vw,72px)!important}
+.hero .tag i{background:#fff!important}
+.road{background:#000}
+.road div{border-right:1px solid #404040}
+.road b{font-weight:400}
+.road div:nth-child(-n+2){border-bottom-color:#404040}
+.stripes{background:repeating-linear-gradient(-60deg,#000 0 10px,transparent 10px 20px)}
+footer .stripes{background:#000;height:1px}
+.clients{border-bottom:1px solid var(--line)}
+.clients img{border-radius:12px}
+.svc{border-radius:0;border:1px solid var(--line);margin:-1px 0 0 -1px}
+.services{gap:0}
+.svc img{border-radius:0}
+.svc .in{border-top:1px solid var(--line)}
+.svc h3{font-size:20px}
+.svc button{color:#000;text-transform:uppercase;font-size:13px;letter-spacing:.05em}
+.values li{border-left:1px solid var(--line);border-radius:0}
+.why div{border-top:1px solid #000}
+form.qf,.contact div{border-radius:0}
+.qf input,.qf select,.qf textarea{border-radius:9999px;padding-left:18px}
+.qf textarea{border-radius:16px}
+.route .arrow{color:#000}
+footer{background:#000}
+a{color:#000}
+.about .pic i{background:#000!important;height:6px}
+@media (max-width:520px){
+  .road{grid-template-columns:1fr}
+  .road div,.road div + div{border-right:0;border-bottom:1px solid #404040;padding-left:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="proposal" role="note">
+  <div class="wrap">
+    <span>Vista previa de rediseño propuesta para Transportes FAVA. No es el sitio oficial.</span>
+    <button type="button" id="openChanges">Ver qué mejoramos</button>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="https://transportesfava.com/wp-content/uploads/2025/09/imglogo1.jpg" alt="Transportes FAVA" width="135" height="44"></a>
+    <nav class="main" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#cotizar">Cotizar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-red call-top" href="tel:+528992144521" aria-label="Llamar al 899 214 4521">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>899 214 4521</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <span class="tag"><i class="stripes" aria-hidden="true"></i>Reynosa, Tamaulipas. Cobertura nacional</span>
+    <h1>Movemos tu maquinaria pesada y tu carga</h1>
+    <p class="lead">Transporte terrestre de equipo, maquinaria pesada y carga general a todo México, con transfer, servicio puerta a puerta, almacenaje y maniobras.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="#cotizar">Cotizar un viaje</a>
+      <a class="btn btn-light" href="tel:+528992144521">Llamar al 899 214 4521</a>
+    </div>
+  </div>
+  <div class="road">
+    <div><b>Maquinaria pesada</b><span>Equipo y maquinaria</span></div>
+    <div><b>Transfer</b><span>Cruce fronterizo</span></div>
+    <div><b>Puerta a puerta</b><span>Recolección y entrega</span></div>
+    <div><b>Almacenaje</b><span>Carga y maniobras</span></div>
+  </div>
+</section>
+
+<section class="clients" aria-labelledby="cliH">
+  <div class="wrap">
+    <div>
+      <h2 id="cliH">Han confiado en nosotros</h2>
+      <p>Empresas de energía, logística y manufactura.</p>
+    </div>
+    <img src="https://transportesfava.com/wp-content/uploads/2025/09/clientes.jpg" alt="Clientes: Sitrain Customs Brokers, Baker Hughes, Flogistix, Fenix, Bespoke Logistics, Schlumberger, Tetra, Kuehne+Nagel, Arzyz Metals y otros" loading="lazy">
+  </div>
+</section>
+
+<section class="block alt" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Soluciones en transporte de carga</h2>
+      <p>Elige el servicio y cotiza tu viaje con origen, destino y tipo de carga.</p>
+    </div>
+    <div class="services" id="svcGrid"></div>
+  </div>
+</section>
+
+<section class="block" id="nosotros">
+  <div class="wrap about">
+    <div class="pic">
+      <img src="https://transportesfava.com/wp-content/uploads/2025/11/acerca_site2-480x853.jpg" alt="Tractocamiones de Transportes FAVA con plataformas de carga" loading="lazy">
+      <i class="stripes" aria-hidden="true"></i>
+    </div>
+    <div class="text">
+      <div class="sec-head" style="margin-bottom:0"><h2>Empresa 100% mexicana, fundada en Reynosa</h2></div>
+      <p>Transportes FAVA nació en Reynosa, Tamaulipas, para impulsar el transporte terrestre a nivel nacional en el traslado de equipo y maquinaria pesada. Más de 5 años nos respaldan en el área.</p>
+      <p>Nuestra misión es ser la solución perfecta de autotransporte para cada cliente, con seguridad en cada viaje y la capacidad, atención y servicio que tu carga requiere.</p>
+      <ul class="values">
+        <li><b>Responsabilidad</b>Con nuestro trabajo, empresa, familia y comunidad.</li>
+        <li><b>Respeto</b>A compañeros, clientes y a las leyes.</li>
+        <li><b>Trabajo en equipo</b>Cooperación y comunicación.</li>
+        <li><b>Lealtad y honestidad</b>Justicia y confianza en cada viaje.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head"><h2>Por qué elegir FAVA</h2></div>
+    <div class="why">
+      <div><h3>Calidad en cada entrega</h3><p>Cobertura amplia, rutas seguras, logística eficiente, seguimiento en tiempo real y entregas puntuales.</p></div>
+      <div><h3>Precios competitivos</h3><p>Infraestructura y tecnología que optimizan tiempos y costos en tu transporte de carga.</p></div>
+      <div><h3>Infraestructura</h3><p>Flota moderna, operadores capacitados y cumplimiento total de normativas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cotizar">
+  <div class="wrap quote">
+    <div class="side">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>Cotiza tu viaje</h2>
+        <p>Dinos qué mueves, de dónde y a dónde. Te respondemos con precio y disponibilidad de unidad.</p>
+      </div>
+      <ul>
+        <li><b>Teléfono</b><a href="tel:+528992144521">899 214 4521</a></li>
+        <li><b>Correo</b><a href="mailto:info@transportesfava.com">info@transportesfava.com</a></li>
+      </ul>
+    </div>
+    <form class="qf" id="qf" novalidate>
+      <div class="full">
+        <label for="qType">Servicio</label>
+        <select id="qType"></select>
+      </div>
+      <div class="full route">
+        <div><label for="qFrom">Origen</label><input id="qFrom" placeholder="Ej. Reynosa, Tamps."></div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div><label for="qTo">Destino</label><input id="qTo" placeholder="Ej. Villahermosa, Tab."></div>
+      </div>
+      <div>
+        <label for="qLoad">Carga y peso aproximado</label>
+        <input id="qLoad" placeholder="Ej. excavadora, 22 t">
+      </div>
+      <div>
+        <label for="qDate">Fecha de carga</label>
+        <input id="qDate" type="date">
+      </div>
+      <div>
+        <label for="qName">Nombre</label>
+        <input id="qName" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="qPhone">Teléfono</label>
+        <input id="qPhone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="full">
+        <label for="qCompany">Empresa</label>
+        <input id="qCompany" autocomplete="organization">
+      </div>
+      <div class="full">
+        <label for="qMsg">Medidas o comentarios</label>
+        <textarea id="qMsg" rows="3" placeholder="Largo, ancho y alto de la pieza; si requiere permiso de sobredimensión o maniobra de carga."></textarea>
+      </div>
+      <div class="full">
+        <button class="btn btn-red" type="submit" style="width:100%">Enviar cotización por correo</button>
+        <p class="err" id="qErr" role="alert" hidden>Escribe tu nombre y teléfono para poder responderte.</p>
+        <p class="note">Se abre tu correo con la solicitud lista para info@transportesfava.com.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="block alt" id="contacto">
+  <div class="wrap">
+    <div class="sec-head"><h2>Contacto</h2></div>
+    <div class="contact">
+      <div>
+        <h3>Dirección</h3>
+        <address>Libramiento Matamoros–Monterrey km 2, Lomas del Real de Jarachina Norte, C.P. 88730, Reynosa, Tamps.</address>
+        <a href="https://www.google.com/maps/search/?api=1&query=Libramiento+Matamoros+Monterrey+km+2+Lomas+del+Real+de+Jarachina+Norte+Reynosa" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div>
+        <h3>Teléfono</h3>
+        <a href="tel:+528992144521">899 214 4521</a>
+      </div>
+      <div>
+        <h3>Correo</h3>
+        <a href="mailto:info@transportesfava.com">info@transportesfava.com</a>
+        <a href="https://www.facebook.com/p/Transportes-FAVA-100093876533701/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="stripes" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <b>Transportes FAVA</b>
+      <p>La solución perfecta de autotransporte. Reynosa, Tamaulipas.</p>
+    </div>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#cotizar">Cotizar</a></li>
+    </ul>
+    <ul>
+      <li><a href="tel:+528992144521">899 214 4521</a></li>
+      <li><a href="mailto:info@transportesfava.com">info@transportesfava.com</a></li>
+    </ul>
+  </div>
+</footer>
+
+<dialog id="changes" aria-labelledby="cT">
+  <div class="dh"><h2 id="cT">Qué mejoramos</h2><button class="x" type="button" data-close aria-label="Cerrar">×</button></div>
+  <div class="db">
+    <ol>
+      <li><b>Cotizador de viajes</b><span>El sitio actual no tiene formulario. Aquí el cliente manda origen, destino, carga, peso y fecha en un solo mensaje.</span></li>
+      <li><b>Llamar con un toque</b><span>El teléfono era texto plano. Ahora está arriba en todas las pantallas y marca directo.</span></li>
+      <li><b>Portada que carga al instante</b><span>La portada actual se queda en blanco unos segundos mientras carga el carrusel.</span></li>
+      <li><b>Los clientes al frente</b><span>Baker Hughes, Schlumberger o Kuehne+Nagel estaban al final de la página. Ahora aparecen justo después de la portada.</span></li>
+      <li><b>Título correcto en Google</b><span>Hoy la pestaña y Google muestran "Transportes FAVA |", sin descripción. Aquí dice qué hacen y dónde.</span></li>
+      <li><b>Estructura limpia</b><span>La portada actual tiene 8 títulos principales (H1) y 17 de 18 imágenes sin texto alternativo.</span></li>
+      <li><b>Textos revisados</b><span>Se corrigió una frase cortada en Valores ("demostrando nuestra.") y la errata "mejora continúa".</span></li>
+    </ol>
+  </div>
+</dialog>
+
+<script>
+const UP = "https://transportesfava.com/wp-content/uploads/2025/09/";
+// [servicio, foto, descripción]: servicios de su sitio actual
+const SVC = [
+  ["Transporte nacional de cargas", "se_carga.jpg", "Traslado de equipo, maquinaria pesada y carga general a todo el país."],
+  ["Servicio de transfer", "se_transfer.jpg", "Cruce de mercancía entre México y Estados Unidos."],
+  ["Servicio puerta a puerta", "se_puerta.jpg", "Recolectamos en tu planta y entregamos en el destino final."],
+  ["Almacenaje de carga y maniobras", "se_maniobras.jpg", "Resguardo de mercancía y maniobras de carga y descarga."]
+];
+document.getElementById("svcGrid").innerHTML = SVC.map(([n, img, d]) => `
+  <article class="svc">
+    <img src="${UP + img}" alt="${n}" loading="lazy" width="400" height="300">
+    <div class="in"><h3>${n}</h3><p>${d}</p><button type="button" data-svc="${n}">Cotizar este servicio</button></div>
+  </article>`).join("");
+
+const sel = document.getElementById("qType");
+sel.innerHTML = SVC.map(s => `<option>${s[0]}</option>`).join("");
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-svc]"); if (!b) return;
+  sel.value = b.dataset.svc;
+  document.getElementById("cotizar").scrollIntoView();
+  setTimeout(() => document.getElementById("qFrom").focus({preventScroll:true}), 400);
+});
+
+document.getElementById("qf").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const err = document.getElementById("qErr");
+  if (!v("qName") || !v("qPhone")) { err.hidden = false; return; }
+  err.hidden = true;
+  const body = [
+    "Solicitud de cotización",
+    `Servicio: ${v("qType")}`, `Ruta: ${v("qFrom")} a ${v("qTo")}`, `Carga y peso: ${v("qLoad")}`, `Fecha de carga: ${v("qDate")}`,
+    `Nombre: ${v("qName")}`, `Teléfono: ${v("qPhone")}`, `Empresa: ${v("qCompany")}`, `Comentarios: ${v("qMsg")}`
+  ].join("\n");
+  location.href = `mailto:info@transportesfava.com?subject=${encodeURIComponent("Cotización: " + v("qFrom") + " a " + v("qTo"))}&body=${encodeURIComponent(body)}`;
+});
+
+const dlg = document.getElementById("changes");
+document.getElementById("openChanges").addEventListener("click", () => dlg.showModal());
+document.querySelector("[data-close]").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
